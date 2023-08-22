@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TimeCheck.unity
+    guid: 01b1864c481474af9af022e98fbe4fd6
+  - enabled: 1
+    path: Assets/Scenes/Timetable.unity
+    guid: 81c21ba48356a4aa6a6b85e384698f52
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2267b65072d54f34b9083077bdb5e976, type: 2}

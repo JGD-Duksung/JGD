@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 
-public class CurrentTime : MonoBehaviour
+public class Currentclock : MonoBehaviour
 {
 
     public Text text_date;

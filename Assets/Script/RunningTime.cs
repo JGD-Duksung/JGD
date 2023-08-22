@@ -11,7 +11,7 @@ public class RunningTime : MonoBehaviour
 
     private Text text;                               //UI Text
 
-    private DelayTimeMain DelayCount;      //이전의 코루틴 설명에 설명된 딜레이 값.
+    //private DelayTimeMain DelayCount;      //이전의 코루틴 설명에 설명된 딜레이 값.
 
 
 
@@ -25,7 +25,7 @@ public class RunningTime : MonoBehaviour
 
         //코드 참조
 
-        DelayCount = GameObject.Find("Canvas").GetComponent<DelayTimeMain>();
+       //DelayCount = GameObject.Find("Canvas").GetComponent<DelayTimeMain>();
 
         //참조된 텍스트 UI 컴포넌트
 
@@ -41,7 +41,7 @@ public class RunningTime : MonoBehaviour
 
     {
 
-        if (DelayCount.DelayCount == 0)    //딜레이 값이 0이면
+        //if (DelayCount.DelayCount == 0)    //딜레이 값이 0이면
 
         {
 

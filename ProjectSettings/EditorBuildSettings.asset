@@ -14,5 +14,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Timetable.unity
     guid: 81c21ba48356a4aa6a6b85e384698f52
+  - enabled: 1
+    path: Assets/Scenes/Mealpage.unity
+    guid: c9464f86178464548ba3a752f405ab91
+  - enabled: 1
+    path: Assets/Scenes/Mainpage.unity
+    guid: 1717721e413dd9f4abb611b3493f5ed5
+  - enabled: 1
+    path: Assets/Scenes/Relaxpage.unity
+    guid: 861f6dd3d6d872d41887d97de308e8a3
+  - enabled: 1
+    path: Assets/Scenes/Sleeppage.unity
+    guid: 12956cf63e76ce24498b448adb72e8fd
+  - enabled: 1
+    path: Assets/Scenes/Studypage.unity
+    guid: 2ba34a291147f264fb383e6584ce130d
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2267b65072d54f34b9083077bdb5e976, type: 2}

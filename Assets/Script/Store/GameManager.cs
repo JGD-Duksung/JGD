@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public TextAsset ItemDatabase;
     public List<Item> AllItemList, MyItemList, CurItemList;
     public string curType = "Store";
-    public GameObject[] Slot, UsingImage;
+    public GameObject[] Slot, UsingImage, BuyButton;
     public Image[] TabImage, ItemImage;
     public Sprite TabIdleSprite, TabSelectSprite;
     public Sprite[] ItemSprite; // 아이템 에셋
@@ -63,6 +63,20 @@ public class GameManager : MonoBehaviour
     }
 
 
+    // 상점 아이템 중 구매
+    public void BuyButtonClick(int slotNum)
+    {
+        Item CurItem = CurItemList[slotNum];
+        //Item MyItem = CurItemList.Find(x => x.myItem == false);
+
+        if (curType == "Store")
+        {
+            CurItem.myItem = true;
+        }
+        Save();
+    }
+
+
 
     public void TabClick(string tabName)
     {
@@ -70,10 +84,10 @@ public class GameManager : MonoBehaviour
         curType = tabName;
         if (curType == "Store")
         {
-            CurItemList = MyItemList.FindAll(x => x.myItem == false);
+            CurItemList = MyItemList.FindAll(x => x.myItem == false); // 상점일 때 myItem이 아닌것만 찾아서 Cur에 넣기
         } else
         {
-            CurItemList = MyItemList.FindAll(x => x.myItem == true);
+            CurItemList = MyItemList.FindAll(x => x.myItem == true); // 가방일 때 myItem인것만 찾아서 Cur에 넣기
         }
 
 
@@ -82,13 +96,15 @@ public class GameManager : MonoBehaviour
             // 상점, 가방에 있는 아이템 보이기
             bool isExist = i < CurItemList.Count;
             Slot[i].SetActive(isExist);
-            Slot[i].GetComponentInChildren<Text>().text = isExist ? CurItemList[i].Name : "";
+            Slot[i].transform.GetChild(0).GetComponent<Text>().text = isExist ? CurItemList[i].Name : "";
+            Slot[i].transform.GetChild(3).GetComponent<Text>().text = isExist ? CurItemList[i].Explain : "";
 
-            // 아이템 이미지와 착용여부 보이기
+            // 아이템 이미지와 착용여부, 구매버튼 보이기
             if (isExist)
             {
                 ItemImage[i].sprite = ItemSprite[AllItemList.FindIndex(x => x.Name == CurItemList[i].Name)];
                 UsingImage[i].SetActive(CurItemList[i].isUsing);
+                BuyButton[i].SetActive(!CurItemList[i].myItem);
             }
         }
 

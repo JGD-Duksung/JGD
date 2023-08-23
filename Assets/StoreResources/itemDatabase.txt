@@ -1,7 +1,7 @@
-Item	선글라스	설명	1	FALSE	FALSE
-Item	헤드셋	설명	1	FALSE	FALSE
-Item	학사모	설명	1	FALSE	FALSE
-Item	학잠_블루	설명	1	FALSE	FALSE
-Item	학잠_블랙	설명	1	FALSE	FALSE
-Item	학잠_레드	설명	1	FALSE	FALSE
-Item	모두 벗기	설명	1	TRUE	TRUE
+Item	선글라스	멋진 선글라스	1	FALSE	FALSE
+Item	헤드셋	멋진 헤드셋	1	FALSE	FALSE
+Item	학사모	졸업을 축하합니다	1	FALSE	FALSE
+Item	학잠_블루	학잠은 역시 블루	1	FALSE	FALSE
+Item	학잠_블랙	학잠은 역시 블랙	1	FALSE	FALSE
+Item	학잠_레드	학잠은 역시 레드	1	FALSE	FALSE
+Item	모두 벗기	덕새는 원래 알몸이야!	1	TRUE	TRUE

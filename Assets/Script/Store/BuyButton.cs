@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class StoreExit : MonoBehaviour
+public class BuyButton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,8 +17,8 @@ public class StoreExit : MonoBehaviour
     {
         
     }
-    public void SceneChange()
+    public void BuyItem()
     {
-        SceneManager.LoadScene("Mainpage");
+        
     }
 }

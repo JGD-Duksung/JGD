@@ -1,0 +1,5 @@
+Item	Item1	설명	1	FALSE	FALSE
+Item	Item2	설명	1	FALSE	FALSE
+Item	Item3	설명	1	FALSE	FALSE
+Item	Item4	설명	1	FALSE	FALSE
+Item	Basic	설명	1	FALSE	TRUE

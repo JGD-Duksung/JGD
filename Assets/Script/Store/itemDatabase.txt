@@ -1,4 +1,0 @@
-Item	Item1	1	FALSE
-Item	Item2	1	FALSE
-Item	Item3	1	FALSE
-Item	Item4	1	FALSE

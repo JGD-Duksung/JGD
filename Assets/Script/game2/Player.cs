@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Stone")
         {   
             //Àû ÆÄ±«
             Destroy(collision.gameObject);

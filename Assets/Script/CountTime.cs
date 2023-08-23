@@ -6,9 +6,9 @@ public class CountTime : MonoBehaviour
 {
     bool btn_active; //버튼이 활성화 상태인지 검사.
     public Text[] text_time; // 시간을 표시할 text
-    public Text btn_text; //상태에 따라 버튼의 text를 변경 하기위한 text
     float time; // 시간.
     public float fcounttime;// 시간 누적을 위해서 저장하는 곳
+    public Sprite[] sprites;
     private void Start()
     {
         btn_active = false; //버튼의 초기 상태를 false로 만듦
@@ -18,21 +18,21 @@ public class CountTime : MonoBehaviour
         if (!btn_active)
         {
             SetTimerOn();
-            btn_text.text = "정 지";
         }
         else
         {
             SetTimerOff();
-            btn_text.text = "시 작";
         }
     }
     public void SetTimerOn()
     { // 버튼 활성화 메소드
         btn_active = true;
+        GameObject.Find("Timerbutton").GetComponent<Image>().sprite = sprites[1];
     }
 
     public void SetTimerOff()
     { // 버튼 비활성화 메소드
+        GameObject.Find("Timerbutton").GetComponent<Image>().sprite = sprites[0];
         fcounttime = time;
         Debug.Log(fcounttime);
         btn_active = false;

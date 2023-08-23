@@ -1,5 +1,7 @@
-Item	Item1	설명	1	FALSE	FALSE
-Item	Item2	설명	1	FALSE	FALSE
-Item	Item3	설명	1	FALSE	FALSE
-Item	Item4	설명	1	FALSE	FALSE
-Item	Basic	설명	1	FALSE	TRUE
+Item	선글라스	설명	1	FALSE	FALSE
+Item	헤드셋	설명	1	FALSE	FALSE
+Item	학사모	설명	1	FALSE	FALSE
+Item	학잠_블루	설명	1	FALSE	FALSE
+Item	학잠_블랙	설명	1	FALSE	FALSE
+Item	학잠_레드	설명	1	FALSE	FALSE
+Item	모두 벗기	설명	1	TRUE	TRUE

@@ -23,13 +23,13 @@ public class GameManager : MonoBehaviour
 {
 
 
-
     public TextAsset ItemDatabase;
     public List<Item> AllItemList, MyItemList, CurItemList;
     public string curType = "Store";
-    public GameObject[] Slot;
-    public Image[] TabImage;
+    public GameObject[] Slot, UsingImage;
+    public Image[] TabImage, ItemImage;
     public Sprite TabIdleSprite, TabSelectSprite;
+    public Sprite[] ItemSprite; // 아이템 에셋
 
 
 
@@ -76,11 +76,20 @@ public class GameManager : MonoBehaviour
             CurItemList = MyItemList.FindAll(x => x.myItem == true);
         }
 
-        // 상점, 가방에 있는 아이템 보이기
+
         for (int i = 0; i < Slot.Length; i++)
         {
-            Slot[i].SetActive(i < CurItemList.Count);
-            Slot[i].GetComponentInChildren<Text>().text = i < CurItemList.Count ? CurItemList[i].Name + "/" + CurItemList[i].isUsing : "";
+            // 상점, 가방에 있는 아이템 보이기
+            bool isExist = i < CurItemList.Count;
+            Slot[i].SetActive(isExist);
+            Slot[i].GetComponentInChildren<Text>().text = isExist ? CurItemList[i].Name : "";
+
+            // 아이템 이미지와 착용여부 보이기
+            if (isExist)
+            {
+                ItemImage[i].sprite = ItemSprite[AllItemList.FindIndex(x => x.Name == CurItemList[i].Name)];
+                UsingImage[i].SetActive(CurItemList[i].isUsing);
+            }
         }
 
         int tabNum = 0;

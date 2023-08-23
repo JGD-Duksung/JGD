@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0cc4e9a2f0ad1bd448d7d9ad45575874
+guid: bf122b1e7cf046a4ba4af50423e5f586
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -141,202 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ducksae_0
+      name: slot_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 978
-        width: 390
-        height: 402
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5315876d2694924eab91a1e03dcd177
-      internalID: -229961838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ducksae_1
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 945
-        width: 390
-        height: 418
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5540721b3e9a5554295429845af26653
-      internalID: 1957620893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ducksae_2
-      rect:
-        serializedVersion: 2
-        x: 814
-        y: 961
-        width: 383
-        height: 416
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0edd604cfa8f8dd488f71cd54dc61e7d
-      internalID: -1165337253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ducksae_3
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 493
-        width: 384
-        height: 415
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21fa796e386bad945b7006899cc25a4d
-      internalID: -1239854807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ducksae_4
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 512
-        width: 388
-        height: 407
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f84aed42bf822444a14b39fda6dabb7
-      internalID: -1372399457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ducksae_5
-      rect:
-        serializedVersion: 2
-        x: 808
-        y: 529
-        width: 384
-        height: 397
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51675eb3ee576aa48adc0696b486b439
-      internalID: -1703634092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ducksae_6
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 41
-        width: 384
-        height: 413
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53c80f5d82ac50f40b92ef5ae88629c3
-      internalID: 1476855039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ducksae_7
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 27
-        width: 375
-        height: 393
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c9461832eda2504c9cf7ce2a075011d
-      internalID: -1417279362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ducksae_8
-      rect:
-        serializedVersion: 2
-        x: 807
-        y: 39
-        width: 384
-        height: 414
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f14b0ce46f580d40acc8fc0b0aa251b
-      internalID: -253443028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ducksae_9
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 916
-        width: 79
-        height: 58
+        x: 24
+        y: 418
+        width: 354
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,8 +155,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2bcf1b9c4a85de4fa69a0601e763ebb
-      internalID: 858914409
+      spriteID: 3eb01fd4ac5f5914bba7cbb2b5f02bdc
+      internalID: -915800207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot_1
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 417
+        width: 354
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab556467fe1b0bf4abf175153430d3ef
+      internalID: -1010341596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot_2
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 417
+        width: 354
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc658530bf9fd724489650e755ef873b
+      internalID: 1943538677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 355
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5be74fdeeb929478b17d7448261d50
+      internalID: 1125733488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot_4
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 32
+        width: 354
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7c79a661812324d83e2922cf8c4472
+      internalID: 753444467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot_5
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 32
+        width: 354
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30347a80a00895d4788f13be7b426179
+      internalID: 1528808129
       vertices: []
       indices: 
       edges: []
@@ -361,16 +277,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ducksae_0: -229961838
-      ducksae_1: 1957620893
-      ducksae_2: -1165337253
-      ducksae_3: -1239854807
-      ducksae_4: -1372399457
-      ducksae_5: -1703634092
-      ducksae_6: 1476855039
-      ducksae_7: -1417279362
-      ducksae_8: -253443028
-      ducksae_9: -881757752
+      slot_0: -915800207
+      slot_1: -1010341596
+      slot_2: 1943538677
+      slot_3: 1125733488
+      slot_4: 753444467
+      slot_5: 1528808129
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

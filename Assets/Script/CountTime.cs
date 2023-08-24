@@ -9,7 +9,7 @@ public class CountTime : MonoBehaviour
     float time; // 시간.
     public float fcounttime;// 시간 누적을 위해서 저장하는 곳
     public Sprite[] sprites;
-    public Animator animator;
+    //public Animator animator;
     private void Start()
     {
         btn_active = false; //버튼의 초기 상태를 false로 만듦
@@ -27,14 +27,14 @@ public class CountTime : MonoBehaviour
     }
     public void SetTimerOn()
     { // 버튼 활성화 메소드
-        animator.SetBool("timeron", true);
+        //animator.SetBool("timeron", true);
         btn_active = true;
         GameObject.Find("Timerbutton").GetComponent<Image>().sprite = sprites[1];
     }
 
     public void SetTimerOff()
     { // 버튼 비활성화 메소드
-        animator.SetBool("timeron", false);
+        //animator.SetBool("timeron", false);
         GameObject.Find("Timerbutton").GetComponent<Image>().sprite = sprites[0];
         fcounttime = time;
         Debug.Log(fcounttime);

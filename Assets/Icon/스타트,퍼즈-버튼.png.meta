@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec3b0d3d318cf344f97452864b989b91
+guid: 36c950e2ad49d4a498bc51fc7c0811f6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_0"
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 216
+        width: 294
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e31609674d2fb47880d944894566d4
+      internalID: -1844589585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_1"
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 252
+        width: 231
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00886dec53f3fc43a42c55a5c862f11
+      internalID: -1561356235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_2"
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 252
+        width: 231
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bda8429275e55642817deeab48f6daa
+      internalID: -1345199219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_3"
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 18
+        width: 300
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed9ed423792a8d46826406c7efc73ec
+      internalID: -140547299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_4"
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 53
+        width: 231
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37eceddf19bfae649826501f95013551
+      internalID: -1861670654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_5"
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 54
+        width: 231
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1c1f3266d839b468087212f4f4765c
+      internalID: 763776569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +276,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_0": -1844589585
+      "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_1": -1561356235
+      "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_2": -1345199219
+      "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_3": -140547299
+      "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_4": -1861670654
+      "\uC2A4\uD0C0\uD2B8,\uD37C\uC988-\uBC84\uD2BC_5": 763776569
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -29,13 +29,13 @@ public class GameManager : MonoBehaviour
     public GameObject[] Slot, UsingImage, BuyButton;
     public Image[] TabImage, ItemImage;
     public Sprite TabIdleSprite, TabSelectSprite;
-    public Sprite[] ItemSprite; // ¾ÆÀÌÅÛ ¿¡¼Â
+    public Sprite[] ItemSprite; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 
 
     void Start()
     {
-        //ÀüÃ¼ ¾ÆÀÌÅÛ ¸®½ºÆ® ºÒ·¯¿À±â
+        //ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
         string[] line = ItemDatabase.text.Substring(0, ItemDatabase.text.Length - 1).Split('\n');
         
         for (int i = 0; i <  line.Length; i++)
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // °¡¹æ¿¡ ¼ÒÁöÇÑ ¾ÆÀÌÅÛ Áß ÀåÂøÇÒ ¾ÆÀÌÅÛ ¼±ÅÃ
+    // ï¿½ï¿½ï¿½æ¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void SlotClick(int slotNum)
     {
         Item CurItem = CurItemList[slotNum];
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // »óÁ¡ ¾ÆÀÌÅÛ Áß ±¸¸Å
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void BuyButtonClick(int slotNum)
     {
         Item CurItem = CurItemList[slotNum];
@@ -80,26 +80,26 @@ public class GameManager : MonoBehaviour
 
     public void TabClick(string tabName)
     {
-        // »óÁ¡, °¡¹æ Å¬¸¯ ÀÌº¥Æ®
+        // ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ®
         curType = tabName;
         if (curType == "Store")
         {
-            CurItemList = MyItemList.FindAll(x => x.myItem == false); // »óÁ¡ÀÏ ¶§ myItemÀÌ ¾Æ´Ñ°Í¸¸ Ã£¾Æ¼­ Cur¿¡ ³Ö±â
+            CurItemList = MyItemList.FindAll(x => x.myItem == false); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ myItemï¿½ï¿½ ï¿½Æ´Ñ°Í¸ï¿½ Ã£ï¿½Æ¼ï¿½ Curï¿½ï¿½ ï¿½Ö±ï¿½
         } else
         {
-            CurItemList = MyItemList.FindAll(x => x.myItem == true); // °¡¹æÀÏ ¶§ myItemÀÎ°Í¸¸ Ã£¾Æ¼­ Cur¿¡ ³Ö±â
+            CurItemList = MyItemList.FindAll(x => x.myItem == true); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ myItemï¿½Î°Í¸ï¿½ Ã£ï¿½Æ¼ï¿½ Curï¿½ï¿½ ï¿½Ö±ï¿½
         }
 
 
         for (int i = 0; i < Slot.Length; i++)
         {
-            // »óÁ¡, °¡¹æ¿¡ ÀÖ´Â ¾ÆÀÌÅÛ º¸ÀÌ±â
+            // ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½æ¿¡ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½
             bool isExist = i < CurItemList.Count;
             Slot[i].SetActive(isExist);
             Slot[i].transform.GetChild(0).GetComponent<Text>().text = isExist ? CurItemList[i].Name : "";
             Slot[i].transform.GetChild(3).GetComponent<Text>().text = isExist ? CurItemList[i].Explain : "";
 
-            // ¾ÆÀÌÅÛ ÀÌ¹ÌÁö¿Í Âø¿ë¿©ºÎ, ±¸¸Å¹öÆ° º¸ÀÌ±â
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ë¿©ï¿½ï¿½, ï¿½ï¿½ï¿½Å¹ï¿½Æ° ï¿½ï¿½ï¿½Ì±ï¿½
             if (isExist)
             {
                 ItemImage[i].sprite = ItemSprite[AllItemList.FindIndex(x => x.Name == CurItemList[i].Name)];
@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
         }
 
         int tabNum = 0;
-        switch (tabName) // »óÁ¡, °¡¹æ ¹öÆ° È°¼ºÈ­ ¿©ºÎ
+        switch (tabName) // ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° È°ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
         {
             case "Store": tabNum = 0; break;
             case "Bag": tabNum = 1; break;

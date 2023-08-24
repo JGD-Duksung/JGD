@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Newtonsoft.Json;
 using System.IO;
 using UnityEngine.UI;
 
@@ -29,13 +28,14 @@ public class GameManager : MonoBehaviour
     public GameObject[] Slot, UsingImage, BuyButton;
     public Image[] TabImage, ItemImage;
     public Sprite TabIdleSprite, TabSelectSprite;
-    public Sprite[] ItemSprite; // ������ ����
+    public Sprite[] ItemSprite; // item slot image
+    string filePath;
 
 
 
     void Start()
     {
-        //��ü ������ ����Ʈ �ҷ�����
+        //item data -> string으로 변환
         string[] line = ItemDatabase.text.Substring(0, ItemDatabase.text.Length - 1).Split('\n');
         
         for (int i = 0; i <  line.Length; i++)
@@ -44,34 +44,44 @@ public class GameManager : MonoBehaviour
 
             AllItemList.Add(new Item(row[0], row[1], row[2], row[3], row[4] == "TRUE", row[5] == "TRUE"));
         }
+        filePath = Application.persistentDataPath + "/MyItemText.txt";
+
         Load();
     }
 
 
-    // ���濡 ������ ������ �� ������ ������ ����
+    public void ResetItemClick()
+    {
+        Item BasicItem = AllItemList.Find(x => x.Name == "모두 벗기");
+        MyItemList = new List<Item>() { BasicItem };
+        Save();
+        Load();
+    }
+
+
+    // 아이템 착용 (item slot 클릭시)
     public void SlotClick(int slotNum)
     {
         Item CurItem = CurItemList[slotNum];
         Item UsingItem = CurItemList.Find(x => x.isUsing == true);
 
-        if (curType == "Bag")
+        if (curType == "Bag") // 가방에 있는 아이템만 착용
         {
-            if (UsingItem != null) UsingItem.isUsing = false;
-            CurItem.isUsing = true;
+            if (UsingItem != null) UsingItem.isUsing = false; // 착용중인 아이템 벗기
+            CurItem.isUsing = true; // 선택한 아이템 착용
         }
         Save();
     }
 
 
-    // ���� ������ �� ����
+    // 구매 버튼 클릭
     public void BuyButtonClick(int slotNum)
     {
         Item CurItem = CurItemList[slotNum];
-        //Item MyItem = CurItemList.Find(x => x.myItem == false);
 
-        if (curType == "Store")
+        if (curType == "Store") // 상점에 있는 아이템만 
         {
-            CurItem.myItem = true;
+            CurItem.myItem = true; // 여기에 돈이 얼마나 있는지 if문 추가
         }
         Save();
     }
@@ -80,26 +90,26 @@ public class GameManager : MonoBehaviour
 
     public void TabClick(string tabName)
     {
-        // ����, ���� Ŭ�� �̺�Ʈ
+        // 상점, 가방 버튼
         curType = tabName;
         if (curType == "Store")
         {
-            CurItemList = MyItemList.FindAll(x => x.myItem == false); // ������ �� myItem�� �ƴѰ͸� ã�Ƽ� Cur�� �ֱ�
+            CurItemList = MyItemList.FindAll(x => x.myItem == false); // 구매 안한 아이템 찾기
         } else
         {
-            CurItemList = MyItemList.FindAll(x => x.myItem == true); // ������ �� myItem�ΰ͸� ã�Ƽ� Cur�� �ֱ�
+            CurItemList = MyItemList.FindAll(x => x.myItem == true); // 구매한 아이템 찾기
         }
 
 
         for (int i = 0; i < Slot.Length; i++)
         {
-            // ����, ���濡 �ִ� ������ ���̱�
+            // 아이템 이름, 설명 나오게
             bool isExist = i < CurItemList.Count;
             Slot[i].SetActive(isExist);
             Slot[i].transform.GetChild(0).GetComponent<Text>().text = isExist ? CurItemList[i].Name : "";
             Slot[i].transform.GetChild(3).GetComponent<Text>().text = isExist ? CurItemList[i].Explain : "";
 
-            // ������ �̹����� ���뿩��, ���Ź�ư ���̱�
+            
             if (isExist)
             {
                 ItemImage[i].sprite = ItemSprite[AllItemList.FindIndex(x => x.Name == CurItemList[i].Name)];
@@ -109,7 +119,7 @@ public class GameManager : MonoBehaviour
         }
 
         int tabNum = 0;
-        switch (tabName) // ����, ���� ��ư Ȱ��ȭ ����
+        switch (tabName)
         {
             case "Store": tabNum = 0; break;
             case "Bag": tabNum = 1; break;
@@ -122,8 +132,7 @@ public class GameManager : MonoBehaviour
 
     void Save()
     {
-        string jdata = JsonConvert.SerializeObject(MyItemList);
-        File.WriteAllText(Application.dataPath + "/StoreResources/MyItemText.txt", jdata);
+        File.WriteAllText(filePath, "tEst");
 
         TabClick(curType);
     }
@@ -132,8 +141,12 @@ public class GameManager : MonoBehaviour
 
     void Load()
     {
-        string jdata = File.ReadAllText(Application.dataPath + "/StoreResources/MyItemText.txt");
-        MyItemList = JsonConvert.DeserializeObject<List<Item>>(jdata);
+        if (!File.Exists(filePath))
+        {
+            ResetItemClick(); return;
+        }
+        string jdata = File.ReadAllText(filePath);
+        
 
         TabClick(curType);
     }
